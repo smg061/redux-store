@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import ProductItem from "../ProductItem";
-import { useStoreContext } from "../../utils/GlobalState";
-import { UPDATE_PRODUCTS } from "../../utils/actions";
+import { UPDATE_PRODUCTS } from "../../utils/state/actions";
 import { useQuery } from "@apollo/client";
 import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
@@ -12,7 +11,6 @@ function ProductList() {
    const dispatch = useDispatch();
    const state = useSelector((state) => state);
    const { currentCategory } = state;
-
    const { loading, data } = useQuery(QUERY_PRODUCTS);
 
    useEffect(() => {
