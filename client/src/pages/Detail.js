@@ -21,7 +21,7 @@ function Detail() {
   const [currentProduct, setCurrentProduct] = useState({});
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-
+  
   const { products, cart } = state;
 
   useEffect(() => {
