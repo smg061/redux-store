@@ -146,7 +146,7 @@ db.once('open', async () => {
     firstName: 'Elijah',
     lastName: 'Holt',
     email: 'eholt@testmail.com',
-    password: 'password12345'
+    password: ' '
   });
 
   console.log('users seeded');
